@@ -1,4 +1,10 @@
-## 编译MNIST模型
+# 运行方法
+### 1.启动springboot项目
+### 2.打开[网址](http://localhost:8080/predict?url=http://www.abilitygame.cn/wp-content/uploads/2021/05/number_7.png)
+### 3.查看Intellij的Console输出
+
+# 代码说明
+### 编译MNIST模型
 使用model.save('model/inference', False)导出成推理模型格式。
 内含三个文件：
 * inference.pdiparams
@@ -6,7 +12,7 @@
 * inference.pdmodel
 打包成一个zip，取名model.zip
 
-## 加载模型
+### 加载模型
 ```java
             // load model
             Criteria<NDList, NDList> criteria = Criteria.builder()
@@ -17,7 +23,7 @@
                     .build();
 ```
 
-## 预处理图片
+### 预处理图片
 ```java
     private NDList processImageInput(Image input) {
         NDManager manager = NDManager.newBaseManager();
@@ -36,7 +42,7 @@
     }
 ```
 
-## 预测
+### 预测
 ```java
     public void predict(Image image) throws TranslateException {
         NDList list = processImageInput(image);
