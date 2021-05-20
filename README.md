@@ -4,7 +4,7 @@
 ### 3.查看Intellij的Console输出
 
 # 代码说明
-### 编译MNIST模型
+### 编译MNIST模型 [网址](https://aistudio.baidu.com/aistudio/projectdetail/1975747)
 使用model.save('model/inference', False)导出成推理模型格式。
 内含三个文件：
 * inference.pdiparams
